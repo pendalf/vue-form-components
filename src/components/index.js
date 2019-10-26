@@ -9,6 +9,7 @@ import Form from './form/Form.vue'
 import FormItem from './form/FormItem.vue'
 import VeeValidate from 'vee-validate'
 import FormBuilder from './from-builder/FormBuilder.vue'
+import Markup from './markup/Markup.vue'
 
 const components = [
   Input,
@@ -20,6 +21,7 @@ const components = [
   Option,
   Form,
   FormItem,
+  Markup,
   FormBuilder
 ]
 

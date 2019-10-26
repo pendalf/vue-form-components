@@ -13,6 +13,11 @@ export default {
       }
     },
     {
+      type: 'markup',
+      label: 'Markup',
+      markup: 'Some text'
+    },
+    {
       type: 'input',
       inputType: 'password',
       label: 'Password',

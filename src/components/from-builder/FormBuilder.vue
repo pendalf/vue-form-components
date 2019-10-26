@@ -30,6 +30,15 @@
             @input="onUpdate"
           />
         </template>
+        <!-- Markup -->
+        <template
+          v-if="field.type === 'markup'"
+        >
+          <vue-markup
+            :key="field.name + index"
+            :markup="field.markup"
+          />
+        </template>
         <!-- Select -->
         <template v-if="field.type === 'select'">
           <vue-select
@@ -116,6 +125,7 @@ import Radio from '../radio/Radio'
 import Select from '../select/Select'
 import Option from '../select/Option'
 import Button from '../button/Button'
+import Markup from '../markup/Markup.vue'
 import { cloneShallow } from '@/utils'
 
 export default {
@@ -130,7 +140,8 @@ export default {
     VueRadio: Radio,
     VueSelect: Select,
     VueOption: Option,
-    VueButton: Button
+    VueButton: Button,
+    VueMarkup: Markup
   },
 
   model: {
