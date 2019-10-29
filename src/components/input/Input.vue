@@ -37,6 +37,7 @@
       :readonly="readonly"
       :max="max"
       :min="min"
+      :step="step"
       :autocomplete="[ autocomplete ? 'off' : 'on' ]"
       class="vue-input__inner"
       @input="onInput"
@@ -102,12 +103,16 @@ export default {
       default: false
     },
     min: {
-      type: Number,
+      type: [String, Number],
       default: null
     },
     max: {
-      type: Number,
+      type: [String, Number],
       default: null
+    },
+    step: {
+      type: [Number],
+      default: 120
     },
     placeholder: {
       type: String,

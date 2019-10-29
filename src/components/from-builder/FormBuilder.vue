@@ -27,6 +27,9 @@
             :readonly="field.readonly"
             :placeholder="field.placeholder"
             :disabled="field.disabled"
+            :min="field.min"
+            :max="field.max"
+            :step="field.step"
             @input="onUpdate"
           />
         </template>

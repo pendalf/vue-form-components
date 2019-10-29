@@ -22,7 +22,11 @@ export default {
 
   data () {
     return {
-      model: {},
+      model: {
+        id: 10,
+        date: '2019-10-29',
+        time: '10:00'
+      },
       schema: {
         fields: [
           {
@@ -63,6 +67,33 @@ export default {
             validate: {
               required: true,
               confirmed: 'password'
+            }
+          },
+          {
+            type: 'input',
+            inputType: 'date',
+            label: 'date',
+            name: 'date',
+            placeholder: 'Type date',
+            model: 'date',
+            min: '2019-10-29',
+            max: '2019-10-30',
+            validate: {
+              required: true
+            }
+          },
+          {
+            type: 'input',
+            inputType: 'time',
+            label: 'time',
+            name: 'time',
+            placeholder: 'Type time',
+            model: 'time',
+            min: '10:00',
+            max: '17:55',
+            step: 1800,
+            validate: {
+              required: true
             }
           },
           {
