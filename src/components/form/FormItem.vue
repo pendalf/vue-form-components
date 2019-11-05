@@ -1,6 +1,9 @@
 <template>
   <div
-    class="vue-form__item"
+    :class="[
+      'vue-form__item',
+      'vue-form__item--' + field
+    ]"
   >
     <div
       v-if="label || form.labelPosition !== 'top'"

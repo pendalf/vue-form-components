@@ -25,6 +25,8 @@ const components = [
   FormBuilder
 ]
 
+const HTMLDivElement = ''
+
 export default {
   install (Vue, options = {}) {
     let veeValidateOptions = {
@@ -53,5 +55,6 @@ export {
   Option,
   Form,
   FormItem,
-  FormBuilder
+  FormBuilder,
+  HTMLDivElement
 }

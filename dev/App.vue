@@ -44,6 +44,7 @@ export default {
           {
             type: 'markup',
             label: 'Markup',
+            model: 'markup',
             markup: '<p>Some text</p>'
           },
           {
