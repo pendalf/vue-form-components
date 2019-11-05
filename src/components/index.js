@@ -1,4 +1,5 @@
 import Input from './input/Input'
+import InputFile from './input/InputFile'
 import Button from './button/Button'
 import Checkbox from './checkbox/Checkbox.vue'
 import CheckboxGroup from './checkbox/CheckboxGroup.vue'
@@ -13,6 +14,7 @@ import Markup from './markup/Markup.vue'
 
 const components = [
   Input,
+  InputFile,
   Button,
   Checkbox,
   CheckboxGroup,
@@ -47,6 +49,7 @@ export default {
 
 export {
   Input,
+  InputFile,
   Button,
   Checkbox,
   CheckboxGroup,

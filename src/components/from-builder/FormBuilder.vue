@@ -15,7 +15,7 @@
       >
         <!-- Input -->
         <template
-          v-if="field.type === 'input'"
+          v-if="field.type === 'input' && field.inputType !== 'file'"
         >
           <vue-input
             :key="field.name + index"
@@ -29,6 +29,23 @@
             :disabled="field.disabled"
             :min="field.min"
             :max="field.max"
+            :step="field.step"
+            @input="onUpdate"
+          />
+        </template>
+        <!-- Input File -->
+        <template
+          v-if="field.type === 'input' && field.inputType === 'file'"
+        >
+          <vue-input-file
+            :key="field.name + index"
+            :ref="field.name"
+            v-model="clonedModel[field.model]"
+            v-validate="field.validate"
+            :type="field.inputType"
+            :name="field.name"
+            :placeholder="field.placeholder"
+            :disabled="field.disabled"
             :step="field.step"
             @input="onUpdate"
           />

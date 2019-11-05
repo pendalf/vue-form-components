@@ -175,6 +175,17 @@ export default {
             }
           },
           {
+            type: 'input',
+            inputType: 'file',
+            name: 'file',
+            label: 'file',
+            model: 'file',
+            validate: {
+              required: true,
+              min: 10
+            }
+          },
+          {
             type: 'actions',
             buttons: [
               {
